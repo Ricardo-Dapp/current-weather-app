@@ -20,7 +20,7 @@ searchButton.onclick = () => search(locationInput.value);
 
 //functions
 function search(value) {
-  // fetches data and passes it to getTemeratureResults()
+  // fetches data and passes it to getTemperatureResults()
   fetch(
     `https://weatherapi-com.p.rapidapi.com/current.json?q=${value}`,
     options
@@ -33,7 +33,7 @@ function search(value) {
 }
 
 function getTemperatureResults(data) {
-  //recieves data from search() and displays the data to the DOM
+  //receive data from search() and displays the data to the DOM
   console.log(data);
   city.innerText = `City: ${data.location.name}`;
   weather.innerText = `Weather: ${data.current.condition.text}`;
